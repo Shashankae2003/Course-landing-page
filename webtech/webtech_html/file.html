@@ -1,0 +1,137 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Tab</title>
+    <style>
+        /* Your existing design styles here */
+
+        /* Styles for the popup */
+        #citationPopup {
+            display: none;
+            /* Additional styles for the popup */
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="researchTab">
+    <input type="text" id="searchBar" placeholder="Search for material">
+    <button onclick="search()">Search</button>
+</div>
+
+
+<div id="citationPopup">
+    <label for="inputInfo">Enter Information:</label>
+    <input type="text" id="inputInfo" placeholder="Enter information">
+    <button onclick="generateCitations()">Generate Citations</button>
+</div>
+
+<script>
+    // Function to handle search
+    function search() {
+        // Implement your search logic here
+        // You may use AJAX to fetch data from the server based on user input
+        // Update the UI accordingly
+    }
+
+    // Function to show the citation popup
+    function showCitationPopup() {
+        document.getElementById('citationPopup').style.display = 'block';
+    }
+
+    // Function to generate citations
+    function generateCitations() {
+        const inputInfo = document.getElementById('inputInfo').value;
+
+        // Assume you have an API endpoint for citation generation
+        const apiUrl = 'your_citation_api_endpoint';
+        
+        // Make a request to the API with the user's input
+        // You may use fetch or another suitable method
+        fetch(apiUrl, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ inputInfo }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Access the citationStyles key from the API response
+            const citationStyles = data.citationStyles;
+
+            // Implement logic to display the generated citations
+            // You may use a library like BibTeX or others for formatting citations
+        })
+        .catch(error => {
+            // console.error('Error:', error);
+        });
+    }
+</script>
+
+</body>
+</html>
+-->
+// Assuming you have React and Material UI installed
+
+import React, { useState, useEffect } from 'react';
+import { TextField, Button, Dialog, DialogTitle, DialogContent, DialogActions } from '@material-ui/core';
+
+const ResearchTab = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [searchResults, setSearchResults] = useState([]);
+  const [openPopup, setOpenPopup] = useState(false);
+
+  const handleSearch = async () => {
+    // Make API request to fetch research data based on searchQuery
+    // Update setSearchResults with the fetched data
+    // Example: const results = await fetchResearchData(searchQuery);
+    // setSearchResults(results);
+  };
+
+  const handleGenerateCitation = () => {
+    // Implement logic to generate citations based on user input
+    // Example: const citations = generateCitations(userInput);
+    // Display citations or save them as needed
+  };
+
+  return (
+    <div>
+      <TextField
+        label="Search"
+        variant="outlined"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+      />
+      <Button variant="contained" color="primary" onClick={handleSearch}>
+        Search
+      </Button>
+
+      {/* Display search results */}
+      <ul>
+        {searchResults.map((result) => (
+          <li key={result.id}>{result.title}</li>
+        ))}
+      </ul>
+
+      {/* Citation Popup */}
+      <Dialog open={openPopup} onClose={() => setOpenPopup(false)}>
+        <DialogTitle>Generate Citations</DialogTitle>
+        <DialogContent>
+          {/* Input fields for user information */}
+          {/* Example: <TextField label="Author" /> */}
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleGenerateCitation} color="primary">
+            Generate Citations
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </div>
+  );
+};
+
+<!-- export default ResearchTab; -->

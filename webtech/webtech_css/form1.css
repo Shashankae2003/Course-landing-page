@@ -1,0 +1,125 @@
+* {
+    text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;1,200;1,300;1,500;1,600&display=swap');
+
+.form {
+    text-align: center;
+    font-family: 'Nunito';
+    background-color: rgb(206, 236, 238);
+    margin-top: 80px;
+    width: 380px;
+    display: inline-block;
+    height: 505px;
+    font-family: sans-serif;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.form:hover {
+    box-shadow: 0px 5px 5px rgb(22, 135, 143);
+}
+
+.form {
+    position: center;
+    top: 60%;
+}
+
+.form div h2 {
+    width: 220px;
+    font-family: sans-serif;
+    text-align: center;
+    color: #ff7200;
+    font-size: 22px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    margin: auto;
+    padding: 8px;
+}
+
+.d1 {
+    font-size: larger;
+    color: rgba(129, 67, 67, 0.992);
+}
+.form input {
+    height: 35px;
+    border-bottom: 1px solid #ff7200;
+    border-top: none;
+    color: red;
+    border-right: none;
+    border-left: none;
+    color: var(--primary-color);
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+.form input:focus {
+    outline: none;
+}
+::placeholder {
+    color: rgb(175, 54, 54);
+    font-family: Arial;
+}
+.btnn {
+    width: 180px;
+    height: 40px;
+    background: #ff7200;
+    border: none;
+    margin-top: 50px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+}
+.btnn:hover {
+    background: #fff;
+    color: #ff7200;
+}
+.btnn a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+.form .link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+}
+.form .link a {
+    text-decoration: none;
+    color: #ff7200;
+}
+#a1 {
+    text-decoration: none;
+    font-weight: 700;
+    color: #ff7200;
+}
+
+.icons a {
+    margin-left: 10px;
+    margin-bottom: 80px;
+    text-decoration: none;
+    color: rgb(182, 73, 73);
+}
+.form.img {
+    width: 100%;
+}
+.img a img {
+    width: 20px;
+    margin-left: 10px;
+    padding: 8px 8px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.img a img :hover {
+    color: #83776e;
+}
+#liw {
+    text-align: unset;
+    margin-top: 30px;
+}
